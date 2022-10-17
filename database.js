@@ -1,10 +1,11 @@
 //const mysql = require("mysql2");
 //let db = null;
 
-import lodash from 'lodash'
+const lodash = require('lodash')
 
 // настраиваем БД
 const low = require('lowdb')
+
 const FileSync = require('lowdb/adapters/FileSync')
 // БД хранится в директории "db" под названием "messages.json"
 const adapter = new FileSync('db/messages.json')
