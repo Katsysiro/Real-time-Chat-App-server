@@ -66,6 +66,6 @@ io.on("connection", function (socket) {
 
 });
 
-http.listen(3000, () => {
-  console.log("Listening on port *: 3000");
+http.listen(3030, () => {
+  console.log("Listening on port *: 3030");
 });
