@@ -7,7 +7,13 @@ const DataBase = require("./database.js");
 const db = new DataBase();
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
+    console.log(req.query)
+    if (req.query.site) {
+        res.sendFile(__dirname + "/sites/" + req.query.site + "/index.html");
+    }
+    else {
+        res.sendFile(__dirname + "/sites/index.html");
+    }
 });
 
 io.on("connection", function (socket) {
